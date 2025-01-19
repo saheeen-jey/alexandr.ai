@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dev-container:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"  # Expose the port if needed
+    command: npm start  # The command to run your application
+    environment:
+      - NODE_ENV=development  # Set any environment variables
